@@ -1,0 +1,82 @@
+@import "SignUP.css";
+
+.container-boxOfSignIN{
+    position: absolute;
+    margin-left: 35%;
+    margin-top: 1%;
+    width: 330px;
+    height: 350px;
+    background-color:#00000096;
+}
+
+.container-boxOfSignIN h1{
+    color: #fff;
+    margin-top: 60px;
+    margin-left: 50px;
+}
+
+input{
+    margin-left: 30px;
+    margin-top: 20px;
+    width: 265px;
+    height: 32px;
+    background-color: #333;
+    border-radius: 3px;
+    border: none;
+    font-size: 20px;
+}
+
+input::placeholder{
+    font-size: 12px;
+    margin-left: 15px;
+    padding: 12px;
+}
+
+input[type=submit]{
+    width: 265px;
+    height: 30px;
+    background-color: red;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 17px;
+}
+
+input[type=checkbox]{
+    width: 25px;
+    height: 18px;
+    border-radius: 5px;
+}
+
+label{
+    color: rgb(125, 119, 119);
+}
+
+.form a{
+    float: right;
+    margin-top: 24px;
+    margin-right: 64px;
+    color: rgb(125, 119, 119);
+    text-decoration: none;
+}
+
+
+
+.content-signIN h2{
+    color: rgb(125, 119, 119);
+}
+
+.container-boxOfSignIN a{
+    color: #fff;
+    text-decoration: none;
+}
+.content-signIN {
+    position: absolute;
+    margin-top: 40px;
+    font-size: 9px;
+    margin-left: 29px;
+}
+
+.content-signIN h2{
+    color: rgb(125, 119, 119);
+}
