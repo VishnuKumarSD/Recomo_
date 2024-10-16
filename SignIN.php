@@ -1,3 +1,23 @@
+<?php 
+   include("database.php");
+
+   if(isset($_POST['signin'])){
+      $email = $_POST['email'];
+      $password = $_POST['password'];
+
+      $sql = "SELECT * FROM users WHERE email = '$email' and password = '$password'";
+      $result = mysqli_QUERY($conn,$sql);
+      $num = mysqli_num_rows($result);
+
+      if($num > 0){
+         echo '<script>alert("Login Success")</script>';
+         header("location:HomePage.php");
+      }
+      else{
+        echo '<script>alert("Email and password not matching")</script>';
+      }
+    }
+?>
 
 
 
@@ -23,7 +43,7 @@
                     <option value="English">English</option>
                     <option value="Hindi">Hindi</option>
                 </select>
-                <a href="SignUP.html" style="padding-top: 38px;font-size: small;text-decoration: none;color: aliceblue;">Don't have an <br> account ?</a>
+                <a href="SignUP.php" style="padding-top: 38px;font-size: small;text-decoration: none;color: aliceblue;">Don't have an <br> account ?</a>
             </div>
         </nav>
 
@@ -31,11 +51,11 @@
             <div class="container-boxOfSignIN">
                 <h3 style="padding-top: 21px;padding-left: 28px;">Sign In</h3>
 
-             <form id="signInForm" action="HomePage.php" method="POST"> <!-- Added the form tag -->  
+             <form id="signInForm" action="SignIN.php" method="POST"> <!-- Added the form tag -->  
                 <div class="form">
                     <input type="email" placeholder="Email" style="padding-left: 5px;" name="email">
                     <input type="password" placeholder="Password" style="padding-left: 5px;" name="password">
-                    <input type="submit" value="Sign In" style="font-size: small;" name="submit">
+                    <input type="submit" value="Sign In" style="font-size: small;" name="signin">
                     <input type="checkbox">
                     <label style="font-size: small;">Remember me</label>
                     <a style="font-size: small;" href="#">Need help?</a>
@@ -50,36 +70,3 @@
     </div>
 </body>
 </html>
-
-<?php
-session_start();
-
-include("database.php"); // Make sure this file contains your database connection logic
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST["email"];
-    $pass = $_POST["password"];
-
-    // Use prepared statements to prevent SQL injection
-    $stmt = $conn->prepare("SELECT * FROM users WHERE email = ?");
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
-    $result = $stmt->get_result();
-
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        if ($pass == $row["password"]) { // You may want to hash the password and compare hashes
-            // Successful login logic here
-            echo "Login successful!";
-            header("Location: HomePage.php");
-        } else {
-            echo "Invalid password.";
-        }
-    } else {
-        echo "No user found with this email.";
-    }
-
-    $stmt->close();
-}
-?>
-
