@@ -1,0 +1,175 @@
+/* General Styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212e7;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+a {
+    color: #1db954;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    background-color: #1f1f1fe8;
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Dashboard Layout */
+.dashboard {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1f1f1fe2;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.stats div {
+    background-color: #333;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+thead {
+    background-color: #333;
+}
+
+thead th {
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 16px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #444;
+}
+
+tbody td {
+    padding: 12px 15px;
+    font-size: 14px;
+}
+
+tbody tr:hover {
+    background-color: #333;
+}
+
+tbody td a {
+    color: #1db954;
+}
+
+tbody td a:hover {
+    text-decoration: underline;
+}
+
+/* Movie Creation Form */
+.create-movie-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+}
+
+.create-movie-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.create-movie-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.create-movie-form input,
+.create-movie-form textarea,
+.create-movie-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.create-movie-form textarea {
+    resize: none;
+    height: 100px;
+}
+
+.create-movie-form input[type="file"] {
+    background-color: #444;
+    padding: 8px;
+}
+
+.create-movie-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1db954;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.create-movie-form button:hover {
+    background-color: #1ed760;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stats div {
+        margin-bottom: 10px;
+    }
+
+    .create-movie-form,
+    .dashboard {
+        width: 90%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}

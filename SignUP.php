@@ -54,9 +54,9 @@
                 <form action="SignUP.php" method="POST">
                     <h3>Ready to watch? Enter your email to create or restart your membership.</h3>
                     <div class="email">
-                        <input type="email" name="email" placeholder="Email address">
-                        <input type="password" name="password" placeholder="password">
-                        <button type="submit" name="signup">Get Started  ></a></button>
+                        <input  type="email" name="email" placeholder="Email address" style=" font-size: 14px;">
+                        <input type="password" name="password" placeholder="password" style=" font-size: 14px;">
+                        <button type="submit" name="signup" style="margin:5px; border-radius: 7px;" >Get Started></a></button>
                     </div>
                 </form>
             </div>

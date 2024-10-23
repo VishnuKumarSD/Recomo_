@@ -1,0 +1,84 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #f1f1f1; /* Light text */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Header Styles */
+.edit-movie-form h2 {
+    text-align: center;
+    color: #59b151; /* Red color for the header */
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+.edit-movie-form {
+    background-color: #1e1e1e; /* Slightly lighter background for form */
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    margin: auto;
+}
+
+.edit-movie-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #bcaeae; /* Red labels */
+}
+
+.edit-movie-form input[type="text"],
+.edit-movie-form input[type="number"],
+.edit-movie-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #2e2929; /* Red border */
+    border-radius: 4px;
+    background-color: #2b2b2b; /* Darker background for inputs */
+    color: #f1f1f1; /* Light text */
+}
+
+.edit-movie-form input[type="text"]:focus,
+.edit-movie-form input[type="number"]:focus,
+.edit-movie-form textarea:focus {
+    outline: none;
+    border-color: #f39c12; /* Orange border on focus */
+    box-shadow: 0 0 5px rgba(243, 156, 18, 0.5);
+}
+
+/* Button Styles */
+.edit-movie-form button {
+    background-color: #e74c3c; /* Red button */
+    color: #fff; /* White text */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 100%; /* Full-width button */
+}
+
+.edit-movie-form button:hover {
+    background-color: #151313; /* Darker red on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .edit-movie-form {
+        padding: 20px;
+    }
+
+    .edit-movie-form h2 {
+        font-size: 24px;
+    }
+
+    .edit-movie-form button {
+        font-size: 14px;
+    }
+}

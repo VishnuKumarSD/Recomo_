@@ -1,17 +1,17 @@
 <?php 
    include("database.php");
 
-   if(isset($_POST['signin'])){
+   if(isset($_POST['login'])){
       $email = $_POST['email'];
       $password = $_POST['password'];
 
-      $sql = "SELECT * FROM users WHERE email = '$email' and password = '$password'";
+      $sql = "SELECT * FROM admin WHERE email = '$email' and password = '$password'";
       $result = mysqli_QUERY($conn,$sql);
       $num = mysqli_num_rows($result);
 
       if($num > 0){
          echo '<script>alert("Login Success")</script>';
-         header("location:HomePage.php");
+         header("location:admin.php");
       }
       else{
         echo '<script>alert("Email and password not matching")</script>';
@@ -49,13 +49,13 @@
 
         <div class="title">
             <div class="container-boxOfSignIN">
-                <h3 style="padding-top: 21px;padding-left: 28px;">Sign In</h3>
+                <h3 style="padding-top: 21px;padding-left: 28px;">Admin</h3>
 
              <form id="signInForm" action="SignIN.php" method="POST"> <!-- Added the form tag -->  
                 <div class="form">
                     <input type="email" placeholder="Email" style="padding-left: 5px; font-size: 14px;" name="email">
                     <input type="password" placeholder="Password" style="padding-left: 5px;  font-size: 14px;" name="password">
-                    <input type="submit" value="Sign In" style="font-size: small;" name="signin">
+                    <input type="submit" value="Sign In" style="font-size: small;" name="login">
                     <input type="checkbox">
                     <label style="font-size: small;">Remember me</label>
                     <a style="font-size: small;" href="#">Need help?</a>
